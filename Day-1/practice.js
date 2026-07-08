@@ -95,47 +95,67 @@
 
 // nums.forEach(sq);
 
-let functionName = prompt("enter the function you want to run");
-switch (functionName) {
-    case "vote":
-        let age = Number(prompt("enter your age"));
-        let checkpoint = prompt("Do you have election card of India?");
-        if (age < 18 || age > 110 || isNaN(age)) {
-            alert("this age is not allowed to vote")
-        }
-        else if (checkpoint != "yes") {
-            alert("Since you are not a citizen of India,you are not allowed to vote");
-        }
-        else {
-            alert("you are allowed to vote");
-        }
+// let functionName = prompt("enter the function you want to run");
+// switch (functionName) {
+//     case "vote":
+//         let age = Number(prompt("enter your age"));
+//         let checkpoint = prompt("Do you have election card of India?");
+//         if (age < 18 || age > 110 || isNaN(age)) {
+//             alert("this age is not allowed to vote")
+//         }
+//         else if (checkpoint != "yes") {
+//             alert("Since you are not a citizen of India,you are not allowed to vote");
+//         }
+//         else {
+//             alert("you are allowed to vote");
+//         }
 
+//         break;
+//     case "bijlibill":
+//         let subdivisionprices = 0;
+//         let MeterUnit = Number(prompt("enter your total units of electiric board"));
+//         if (isNaN(MeterUnit)) {
+//             alert("enter the unit which is displayed on the electricity board ")
+//         }
+//         if (MeterUnit > 400) {
+//             subdivisionprices += (MeterUnit - 400) * 6;
+//             MeterUnit = 400;
+//         };
+//         if (MeterUnit > 200) {
+//             subdivisionprices += (MeterUnit - 200) * 4;
+//             MeterUnit = 200;
+//         }
+//         if (MeterUnit > 100) {
+//             subdivisionprices += (MeterUnit - 100) * 3;
+//             MeterUnit = 100;
+//         }
+//         if (MeterUnit > 0) {
+//             subdivisionprices += MeterUnit * 2.5
+//         }
+
+//         alert(`your total cost of electicity bill is : $ ${subdivisionprices}`)
+//         break;
+
+//     default:
+//         alert("Your input is wrong");
+// };
+
+// if i use :-
+// let num = 0.1+0.2;
+// why i get default case
+// and if i use 
+// let num = 0.3+0.2;
+//  i get case 0.5 why
+ // to fix this we use this method:-
+let num = +(0.1+0.2).toFixed(1);
+switch(num){
+    case 0.3:
+        console.log("hello");
         break;
-    case "bijlibill":
-        let subdivisionprices = 0;
-        let MeterUnit = Number(prompt("enter your total units of electiric board"));
-        if (isNaN(MeterUnit)) {
-            alert("enter the unit which is displayed on the electricity board ")
-        }
-        if (MeterUnit > 400) {
-            subdivisionprices += (MeterUnit - 400) * 6;
-            MeterUnit = 400;
-        };
-        if (MeterUnit > 200) {
-            subdivisionprices += (MeterUnit - 200) * 4;
-            MeterUnit = 200;
-        }
-        if (MeterUnit > 100) {
-            subdivisionprices += (MeterUnit - 100) * 3;
-            MeterUnit = 100;
-        }
-        if (MeterUnit > 0) {
-            subdivisionprices += MeterUnit * 2.5
-        }
-
-        alert(`your total cost of electicity bill is : $ ${subdivisionprices}`)
+    case 0.5:
+        console.log("ok");
         break;
-
     default:
-        alert("Your input is wrong");
-};
+        console.log("default case chala");
+        
+}
