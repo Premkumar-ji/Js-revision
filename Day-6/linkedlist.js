@@ -1,4 +1,25 @@
+// class Node{
+//      constructor(val) {
+//         this.value = val;
+//         this.next = null;
+//     }
+// }
 
+// let node1 = new Node("prem");
+// let node2 = new Node("kumar");
+// let node3 = new Node("modi");
+
+// node1.next = node2;
+// node2.next = node3; 
+
+// let head = node1;
+// let current = head;
+
+// while(current!= null){
+//     console.log(current.data);
+//     current = current.next;
+    
+// }
 class Node {
     constructor(data){
         this.data = data;
